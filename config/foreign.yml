@@ -1,0 +1,76 @@
+# ---------------------------------------------------------------------------
+# Paises de fuera de la region, para clasificar coautorias internacionales.
+#
+# No sirven para asignar pais a una publicacion del estudio: sirven para
+# separar, entre las afiliaciones que no son de la region, las que SI se
+# reconocieron (coautor extranjero, lo normal) de las que quedaron sin
+# clasificar (candidatas a revisar y a ampliar config/institutions.yml).
+#
+# Sin esta separacion, la cobertura del mapeo se ve artificialmente baja.
+# ---------------------------------------------------------------------------
+
+foreign_markers:
+  - united states
+  - usa
+  - u.s.a
+  - california
+  - massachusetts
+  - new york
+  - maryland
+  - arizona
+  - texas
+  - colorado
+  - hawaii
+  - pasadena
+  - cambridge, ma
+  - united kingdom
+  - england
+  - scotland
+  - oxford
+  - canada
+  - germany
+  - deutschland
+  - france
+  - italy
+  - italia
+  - spain
+  - espana
+  - netherlands
+  - belgium
+  - switzerland
+  - sweden
+  - denmark
+  - norway
+  - finland
+  - austria
+  - poland
+  - portugal
+  - russia
+  - china
+  - japan
+  - india
+  - australia
+  - new zealand
+  - south africa
+  - israel
+  - south korea
+  - taiwan
+  - mexico
+  - brazil
+  - brasil
+  - argentina
+  - chile
+  - colombia
+  - peru
+  - uruguay
+  - venezuela
+  - ecuador
+  - bolivia
+  - european southern observatory
+  - eso
+  - nasa
+  - jpl
+  - esa
+  - cern
+  - max-planck
+  - cnrs

@@ -1,0 +1,174 @@
+# ---------------------------------------------------------------------------
+# Paises del estudio y patrones para resolver afiliaciones.
+#
+# `scope` controla que subconjunto se extrae:
+#   centroamerica -> solo region: centroamerica
+#   caribe        -> solo region: caribe
+#   all           -> ambas
+# ---------------------------------------------------------------------------
+
+scope: centroamerica
+
+countries:
+  # ----------------------------- Centroamerica -----------------------------
+  - iso3: BLZ
+    name: Belice
+    name_en: Belize
+    region: centroamerica
+    tld: .bz
+    aff_patterns: ["belize"]
+    cities: ["belmopan", "belize city"]
+
+  - iso3: GTM
+    name: Guatemala
+    name_en: Guatemala
+    region: centroamerica
+    tld: .gt
+    aff_patterns: ["guatemala", "guatemalan"]
+    cities: ["ciudad de guatemala", "guatemala city"]
+
+  - iso3: SLV
+    name: El Salvador
+    name_en: El Salvador
+    region: centroamerica
+    tld: .sv
+    aff_patterns: ["el salvador", "salvadoran"]
+    cities: ["san salvador"]
+
+  - iso3: HND
+    name: Honduras
+    name_en: Honduras
+    region: centroamerica
+    tld: .hn
+    aff_patterns: ["honduras", "honduran"]
+    cities: ["tegucigalpa", "san pedro sula"]
+
+  - iso3: NIC
+    name: Nicaragua
+    name_en: Nicaragua
+    region: centroamerica
+    tld: .ni
+    aff_patterns: ["nicaragua", "nicaraguan"]
+    cities: ["managua", "leon, nicaragua"]
+
+  - iso3: CRI
+    name: Costa Rica
+    name_en: Costa Rica
+    region: centroamerica
+    tld: .cr
+    aff_patterns: ["costa rica", "costa rican", "costarricense"]
+    # "san jose" se omite a proposito: es ambiguo (CA, US, Uruguay).
+    cities: ["heredia, costa rica", "san jose, costa rica"]
+
+  - iso3: PAN
+    name: Panama
+    name_en: Panama
+    region: centroamerica
+    tld: .pa
+    aff_patterns: ["panama", "panamanian", "panamenian"]
+    cities: ["ciudad de panama", "panama city"]
+
+  # -------------------------------- Caribe ---------------------------------
+  - iso3: ATG
+    name: Antigua y Barbuda
+    name_en: Antigua and Barbuda
+    region: caribe
+    tld: .ag
+    aff_patterns: ["antigua and barbuda", "antigua & barbuda"]
+    cities: ["saint john's"]
+
+  - iso3: BHS
+    name: Bahamas
+    name_en: Bahamas
+    region: caribe
+    tld: .bs
+    aff_patterns: ["bahamas", "bahamian"]
+    cities: ["nassau, bahamas"]
+
+  - iso3: BRB
+    name: Barbados
+    name_en: Barbados
+    region: caribe
+    tld: .bb
+    aff_patterns: ["barbados", "barbadian"]
+    cities: ["bridgetown"]
+
+  - iso3: CUB
+    name: Cuba
+    name_en: Cuba
+    region: caribe
+    tld: .cu
+    aff_patterns: ["cuba", "cuban"]
+    cities: ["la habana", "havana"]
+
+  - iso3: DMA
+    name: Dominica
+    name_en: Dominica
+    region: caribe
+    tld: .dm
+    aff_patterns: ["dominica,", "commonwealth of dominica"]
+    cities: ["roseau"]
+
+  - iso3: GRD
+    name: Granada
+    name_en: Grenada
+    region: caribe
+    tld: .gd
+    aff_patterns: ["grenada", "grenadian"]
+    cities: ["saint george's"]
+
+  - iso3: HTI
+    name: Haiti
+    name_en: Haiti
+    region: caribe
+    tld: .ht
+    aff_patterns: ["haiti", "haitian", "haiti,"]
+    cities: ["port-au-prince"]
+
+  - iso3: JAM
+    name: Jamaica
+    name_en: Jamaica
+    region: caribe
+    tld: .jm
+    aff_patterns: ["jamaica", "jamaican"]
+    cities: ["kingston, jamaica", "mona, jamaica"]
+
+  - iso3: DOM
+    name: Republica Dominicana
+    name_en: Dominican Republic
+    region: caribe
+    tld: .do
+    aff_patterns: ["dominican republic", "republica dominicana"]
+    cities: ["santo domingo", "santiago de los caballeros"]
+
+  - iso3: KNA
+    name: San Cristobal y Nieves
+    name_en: Saint Kitts and Nevis
+    region: caribe
+    tld: .kn
+    aff_patterns: ["saint kitts", "st. kitts", "nevis"]
+    cities: ["basseterre"]
+
+  - iso3: LCA
+    name: Santa Lucia
+    name_en: Saint Lucia
+    region: caribe
+    tld: .lc
+    aff_patterns: ["saint lucia", "st. lucia"]
+    cities: ["castries"]
+
+  - iso3: VCT
+    name: San Vicente y las Granadinas
+    name_en: Saint Vincent and the Grenadines
+    region: caribe
+    tld: .vc
+    aff_patterns: ["saint vincent", "st. vincent", "grenadines"]
+    cities: ["kingstown"]
+
+  - iso3: TTO
+    name: Trinidad y Tobago
+    name_en: Trinidad and Tobago
+    region: caribe
+    tld: .tt
+    aff_patterns: ["trinidad and tobago", "trinidad & tobago", "trinidadian"]
+    cities: ["port of spain", "saint augustine, trinidad"]

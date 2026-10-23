@@ -1,0 +1,30 @@
+# Material fuente (Drive): papers, presentaciones y bases de datos originales
+drive/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Logs de corridas
+logs/
+
+# Cache de respuestas de la API
+.cache/
+
+# Datos generados
+data/raw/
+data/interim/
+data/processed/
+outputs/
+
+# macOS
+.DS_Store

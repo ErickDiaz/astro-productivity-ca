@@ -1,0 +1,58 @@
+# ---------------------------------------------------------------------------
+# Instituciones semilla por pais.
+#
+# Sirven para dos cosas:
+#   1. Ampliar la query de ADS cuando la afiliacion no nombra al pais
+#      (p. ej. "Observatorio Astronomico Centroamericano de Suyapa").
+#   2. Resolver afiliacion -> pais por nombre de institucion.
+#
+# Esta lista crece con lo que se encuentre en el notebook de validacion.
+# ---------------------------------------------------------------------------
+
+institutions:
+  GTM:
+    - "Universidad de San Carlos"
+    - "USAC"
+    - "Universidad del Valle de Guatemala"
+    - "Universidad Rafael Landivar"
+  HND:
+    - "Universidad Nacional Autonoma de Honduras"
+    - "UNAH"
+    - "Observatorio Astronomico Centroamericano de Suyapa"
+    - "OACS"
+    - "OAUNAH"
+  SLV:
+    - "Universidad de El Salvador"
+    - "Universidad Centroamericana Jose Simeon Canas"
+    - "UCA El Salvador"
+  NIC:
+    - "Universidad Nacional Autonoma de Nicaragua"
+    - "UNAN"
+    - "Universidad Centroamericana"
+  CRI:
+    - "Universidad de Costa Rica"
+    - "Universidad Nacional, Heredia"
+    - "Instituto Tecnologico de Costa Rica"
+    - "Centro de Investigaciones Espaciales"
+    - "CINESPA"
+  PAN:
+    - "Universidad de Panama"
+    - "Universidad Tecnologica de Panama"
+    - "Instituto Smithsonian de Investigaciones Tropicales"
+    - "Smithsonian Tropical Research Institute"
+  BLZ:
+    - "University of Belize"
+  CUB:
+    - "Instituto de Geofisica y Astronomia"
+    - "Universidad de La Habana"
+    - "Academia de Ciencias de Cuba"
+  DOM:
+    - "Universidad Autonoma de Santo Domingo"
+    - "Instituto Tecnologico de Santo Domingo"
+    - "INTEC"
+  JAM:
+    - "University of the West Indies, Mona"
+  TTO:
+    - "University of the West Indies, St. Augustine"
+  BRB:
+    - "University of the West Indies, Cave Hill"
