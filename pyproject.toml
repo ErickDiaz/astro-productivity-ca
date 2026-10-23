@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "astroca"
+version = "0.1.0"
+description = "Bibliometria de la produccion astronomica en Centroamerica y el Caribe (NASA ADS)"
+authors = ["ErickDiaz <ewdiazsa@gmail.com>"]
+readme = "README.md"
+packages = [{include = "astroca", from = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+requests = ">=2.31.0"
+pandas = ">=2.0.0"
+pydantic = ">=2.0.0"
+pydantic-settings = ">=2.0.0"
+pyyaml = ">=6.0"
+typer = ">=0.12.0"
+rich = ">=13.0.0"
+tenacity = ">=8.2.0"
+python-dotenv = ">=1.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=7.4.0"
+pytest-cov = ">=4.1.0"
+ruff = ">=0.5.0"
+jupyterlab = ">=4.0.0"
+matplotlib = ">=3.7.0"
+
+[tool.poetry.scripts]
+astroca = "astroca.cli:app"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+# UP (pyupgrade) se omite a proposito: el proyecto soporta Python 3.9,
+# donde `dict[str, int]` en anotaciones evaluadas falla.
+select = ["E", "F", "I", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

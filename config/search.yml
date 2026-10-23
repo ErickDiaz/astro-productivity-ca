@@ -1,0 +1,70 @@
+# ---------------------------------------------------------------------------
+# Definicion del universo de busqueda en NASA ADS.
+#
+# La query final se arma como:
+#   database:astronomy AND <filtros> AND <keywords> AND <clausula de pais>
+#
+# Para ampliar el estudio basta agregar keywords aqui: no hay que tocar codigo.
+# ---------------------------------------------------------------------------
+
+field:
+  # Filtro base del campo. Es el punto de partida acordado: toda la literatura
+  # que ADS clasifica como astronomia.
+  database: astronomy
+
+  # Solo articulos con referato. Ponlo en false para incluir proceedings,
+  # tesis y notas tecnicas.
+  refereed_only: true
+
+  # Palabras clave para acotar el campo. Vacio = todo `database:astronomy`.
+  # Se agregan progresivamente, al estilo de Sierra-Flores et al. (2009).
+  # Ejemplo:
+  #   keywords:
+  #     - "herbig-haro"
+  #     - "molecular outflows"
+  #     - "t tauri"
+  keywords: []
+
+  # Como se combinan los keywords entre si: OR (union) o AND (interseccion).
+  keyword_logic: OR
+
+  # Campos de ADS sobre los que se buscan los keywords.
+  # Opciones utiles: abs (titulo+resumen+keywords), title, full, keyword.
+  keyword_fields:
+    - abs
+
+period:
+  start_year: 1950
+  end_year: 2025
+
+authors:
+  # Corte anti hiper-autoria del paper ancla (arXiv:2503.05658): se descartan
+  # publicaciones con mas de N autores para no diluir la atribucion individual.
+  # null desactiva el corte.
+  max_authors: 10
+
+extraction:
+  # Filas por pagina. ADS admite hasta 2000; 200 es un punto conservador.
+  rows_per_page: 200
+
+  # Tope de registros por pais. null = sin tope. Util para pruebas rapidas.
+  max_records_per_country: null
+
+  # Campos que se piden a la API. Cambiarlos invalida la cache.
+  fields:
+    - bibcode
+    - title
+    - year
+    - pubdate
+    - author
+    - author_count
+    - aff
+    - aff_id
+    - doi
+    - pub
+    - citation_count
+    - read_count
+    - doctype
+    - property
+    - orcid_pub
+    - keyword
